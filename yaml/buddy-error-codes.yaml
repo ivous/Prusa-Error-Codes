@@ -308,7 +308,7 @@ Errors:
     approved: true
 
   - code: "XX130"
-    printers: [COREONE_INDX, COREONEL_INDX]
+    printers: [COREONE_INDX, COREONEL_INDX, XL]
     title: "Tool Offset Failed"
     text: "Tool offset calibration failed. Make sure the nozzle and the sensor are clean.\nCaution: the nozzle may be hot."
     id: "TOOL_OFFSET_CALIBRATION_FAILED"
@@ -316,7 +316,7 @@ Errors:
     approved: true
 
   - code: "XX131"
-    printers: [COREONE_INDX, COREONEL_INDX]
+    printers: [COREONE_INDX, COREONEL_INDX, XL]
     title: "Unsafe Z Tool Offset"
     text: "The measured Z offset exceeds the safe limit. Make sure the nozzle and the sensor are clean.\nCaution: the nozzle may be hot."
     id: "TOOL_OFFSET_UNSAFE_Z_DEVIATION"
@@ -332,7 +332,7 @@ Errors:
     approved: true
 
   - code: "XX133"
-    printers: [COREONE_INDX, COREONEL_INDX]
+    printers: [COREONE_INDX, COREONEL_INDX, XL]
     title: "Unsafe XY Tool Offset"
     text: "The measured XY offset exceeds the safe limit. Make sure the nozzle and the sensor are clean.\nCaution: the nozzle may be hot."
     id: "TOOL_OFFSET_UNSAFE_XY"
@@ -340,7 +340,7 @@ Errors:
     approved: true
 
   - code: "XX134"
-    printers: [COREONE_INDX, COREONEL_INDX]
+    printers: [COREONE_INDX, COREONEL_INDX, XL]
     title: "Unsafe Sensor Position"
     text: "The tool offset sensor position exceeds the safe limit. Make sure the nozzle and the sensor are clean.\nCaution: the nozzle may be hot."
     id: "TOOL_OFFSET_UNSAFE_SENSOR_XY"
@@ -393,6 +393,33 @@ Errors:
     text: "The nozzle is very hot. Close the door to prevent burns."
     action: []
     id: "HOTEND_BURN_RISK"
+    gui_layout: "warning_dialog"
+    approved: true
+
+  - code: "XX141"
+    printers: [XL]
+    title: "Printer Type Set to XL+"
+    text: "XL-CAN bridge detected. Printer type has been set to Original Prusa XL+. Settings have been updated."
+    id: "PRINTER_DETECTED_AS_XLS"
+    type: WARNING
+    gui_layout: "warning_dialog"
+    approved: true
+
+  - code: "XX142"
+    printers: [XL]
+    title: "Printer Type Set to XL"
+    text: "No XL-CAN bridge found. Printer type has been set to Original Prusa XL. Settings have been updated."
+    id: "PRINTER_DETECTED_AS_XL"
+    type: WARNING
+    gui_layout: "warning_dialog"
+    approved: true
+
+  - code: "XX143"
+    printers: [XL]
+    title: "Check XL-CAN Connection"
+    text: "XL-CAN bridge is not responding and the Modular Bed reset is not under printer control. Cabling or board failure."
+    id: "XL_CAN_WIRING_SUSPECTED"
+    type: WARNING
     gui_layout: "warning_dialog"
     approved: true
 
